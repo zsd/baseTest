@@ -30,9 +30,20 @@ public class StringTest {
         return flag;
     }
 
+    /**
+     * lastIndexOf方法测试使用.
+     */
+    public void lastIndexofTest() {
+        String fullFileName = "abc.jpg";
+        int index = fullFileName.lastIndexOf(".");
+        System.out.println("before the dot：" + fullFileName.substring(0, index));
+        System.out.println("after the dot：" + fullFileName.substring(index + 1, fullFileName.length()));
+    }
+
     public static void main(String args[]) {
         StringTest st = new StringTest();
         st.containsTest();
         st.endWithTest();
+        st.lastIndexofTest();
     }
 }
