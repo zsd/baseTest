@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * ForEach循环测试.
- * Created by zhousd on 2014/9/26.
+ * @author zhousd
  */
 public class ForEachTest {
 
