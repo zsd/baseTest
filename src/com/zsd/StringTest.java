@@ -40,10 +40,21 @@ public class StringTest {
         System.out.println("after the dot：" + fullFileName.substring(index + 1, fullFileName.length()));
     }
 
+    /**
+     * 字符串转换成大写测试.
+     */
+    public void toUpperCaseTest() {
+        String stringWithLowChar = "2222222x";
+        String result = stringWithLowChar.toUpperCase();
+        System.out.println("origin string is : " + stringWithLowChar);
+        System.out.println("after upperCase is : " + result);
+    }
+
     public static void main(String args[]) {
         StringTest st = new StringTest();
         st.containsTest();
         st.endWithTest();
         st.lastIndexofTest();
+        st.toUpperCaseTest();
     }
 }
