@@ -50,11 +50,23 @@ public class StringTest {
         System.out.println("after upperCase is : " + result);
     }
 
+    /**
+     * 字符串截取替换.
+     */
+    public void splitTest() {
+        String s = "1234567890";
+        if (s.length() > 5) {
+            s = s.substring(0, 5) + "...";
+        }
+        System.out.println("s = " + s);
+    }
+
     public static void main(String args[]) {
         StringTest st = new StringTest();
         st.containsTest();
         st.endWithTest();
         st.lastIndexofTest();
         st.toUpperCaseTest();
+        st.splitTest();
     }
 }
