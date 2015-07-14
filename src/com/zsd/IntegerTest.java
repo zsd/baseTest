@@ -22,8 +22,23 @@ public class IntegerTest {
         System.out.println("转换后的数字为：" + temp1Int);
     }
 
+    /**
+     * 测试传入的变量,会不会修改.
+     */
+    public void paramTest() {
+        int i = 30;
+        this.intModify(i);
+        System.out.println("i is " + i);
+    }
+
+    private void intModify(int i) {
+        i ++;
+        System.out.println("i is " + i);
+    }
+
     public static void main(String args[]) {
         IntegerTest it = new IntegerTest();
         it.parseTest();
+        it.paramTest();
     }
 }
