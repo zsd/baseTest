@@ -1,5 +1,10 @@
 package com.zsd;
 
+import com.sun.org.apache.xerces.internal.xs.StringList;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 字符串测试类.
  * @author zhousd
@@ -61,6 +66,24 @@ public class StringTest {
         System.out.println("s = " + s);
     }
 
+    public List<String> parseTest(String test) {
+        List<String> stringList = new ArrayList<String>();
+        String[] temp = test.split(",");
+        for (String str : temp) {
+            if (str.contains("~")) {
+                String[] tempRoomNumberStr = str.split("~");
+                int minFloorNumber = Integer.parseInt((tempRoomNumberStr[0].split("0"))[0]);
+                int maxFloorNumber = Integer.parseInt((tempRoomNumberStr[1].split("0"))[0]);
+                for (int i = minFloorNumber; i <= maxFloorNumber; i++) {
+                    stringList.add(i + "0" + (tempRoomNumberStr[0].split("0"))[1]);
+                }
+            } else {
+                stringList.add(str);
+            }
+        }
+        return stringList;
+    }
+
     public static void main(String args[]) {
         StringTest st = new StringTest();
         st.containsTest();
@@ -68,5 +91,17 @@ public class StringTest {
         st.lastIndexofTest();
         st.toUpperCaseTest();
         st.splitTest();
+
+        String test = "101~1501,102~1502";
+        List<String> stringList = st.parseTest(test);
+        for (int i = 0; i < stringList.size(); i++) {
+            System.out.println(stringList.get(i));
+        }
+
+        String test1 = "101";
+        List<String> stringList1 = st.parseTest(test1);
+        for (int i = 0; i < stringList1.size(); i++) {
+            System.out.println(stringList1.get(i));
+        }
     }
 }
