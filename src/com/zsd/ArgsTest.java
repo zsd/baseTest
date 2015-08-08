@@ -39,7 +39,7 @@ public class ArgsTest {
                 System.out.println("很可爱！");
                 break;
             case 3:
-                System.out.println("90后？");
+                System.out.println("90后？？");
                 break;
             case 4:
                 System.out.println("很聪明！");
