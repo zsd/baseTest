@@ -4,7 +4,7 @@ package com.zsd.utils;
  * 测试通用类--学生类.
  * @author zhousd
  */
-public class Student {
+public class Student extends Person {
 
     private String id = "";
     private String name = "";
@@ -17,6 +17,10 @@ public class Student {
         this();
         this.id = id;
         this.name = name;
+    }
+
+    public void doSomething(String str) {
+        System.out.println("student");
     }
 
     public String getId() {
