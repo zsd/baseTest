@@ -103,5 +103,12 @@ public class StringTest {
         for (int i = 0; i < stringList1.size(); i++) {
             System.out.println(stringList1.get(i));
         }
+
+        String test2 = "172884_1601041553220.jpg|172884_1601041553231.jpg|172884_1601041553232.jpg|";
+        String[] stringArray = test2.split("\\|");
+        System.out.println("数组长度：" + stringArray.length);
+        for (int i = 0; i < stringArray.length; i++) {
+            System.out.println("stringArray["+ i + "]=" + stringArray[i]);
+        }
     }
 }
